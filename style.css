@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Gradient background */
+    color: #fff;
+    padding: 1.5em 0;
+    text-align: center;
+    border-bottom: 5px solid #5a67d8; /* Slightly darker shade for border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin: 1em 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #5a67d8; /* Adjusted link color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4c51bf; /* Darker shade on hover */
+}
+
+main {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #6a82fb; /* Matches header gradient */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usage {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 5px solid #6a82fb; /* Matches header gradient */
+    margin-top: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+a {
+    color: #5a67d8; /* Adjusted link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4c51bf; /* Darker shade on hover */
+}
+
+footer {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+footer a {
+    color: #ffdd57; /* Specific color for footer links */
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffbb33; /* Darker shade on hover for footer links */
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Git Commands Index</h1>
+    </header>
+    <nav>
+        <a href="#basic">Basic Commands</a>
+        <a href="#branching">Branching</a>
+        <a href="#remote">Remote Repositories</a>
+        <a href="#advanced">Advanced Commands</a>
+    </nav>
+    <main>
+        <section id="basic">
+            <h2>Basic Commands</h2>
+            <div class="content">
+                <p><strong><code>git init</code></strong>: Initialize a new Git repository.</p>
+                <div class="usage">
+                    <p><code>git init my-repo</code></p>
+                    <p>This command creates a new directory named <code>my-repo</code> (if it doesn't already exist) and initializes a new Git repository in it. If you run <code>git init</code> without specifying a directory, it initializes a Git repository in the current directory.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-init" target="_blank">Learn more about <code>git init</code></a></p>
+                
+                <p><strong><code>git clone &lt;url&gt;</code></strong>: Clone an existing repository from the specified URL.</p>
+                <div class="usage">
+                    <p><code>git clone https://github.com/user/repo.git</code></p>
+                    <p>This command copies the repository from the provided URL to your local machine. It creates a new directory named after the repository and initializes it with the content of the remote repository.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-clone" target="_blank">Learn more about <code>git clone</code></a></p>
+                
+                <p><strong><code>git status</code></strong>: Show the working tree status.</p>
+                <div class="usage">
+                    <p><code>git status</code></p>
+                    <p>This command displays the status of your working directory and the staging area. It shows which changes have been staged, which are in the working directory, and which files aren’t being tracked by Git.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-status" target="_blank">Learn more about <code>git status</code></a></p>
+                
+                <p><strong><code>git add &lt;file&gt;</code></strong>: Add file contents to the index (staging area).</p>
+                <div class="usage">
+                    <p><code>git add index.html</code></p>
+                    <p>This command stages the file <code>index.html</code> for the next commit. It tells Git to include the changes to this file in the next commit. To stage all changed files, you can use <code>git add .</code></p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-add" target="_blank">Learn more about <code>git add</code></a></p>
+                
+                <p><strong><code>git commit -m "message"</code></strong>: Record changes to the repository with a message.</p>
+                <div class="usage">
+                    <p><code>git commit -m "Added new feature"</code></p>
+                    <p>This command creates a new commit with the changes you’ve staged and attaches a descriptive message. The message <code>"Added new feature"</code> describes the changes included in this commit.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-commit" target="_blank">Learn more about <code>git commit</code></a></p>
+            </div>
+        </section>
+        
+        <section id="branching">
+            <h2>Branching</h2>
+            <div class="content">
+                <p><strong><code>git branch</code></strong>: List, create, or delete branches.</p>
+                <div class="usage">
+                    <p><code>git branch</code></p>
+                    <p>This command lists all the branches in your repository. The current branch is highlighted with an asterisk (*). To create a new branch, you can use <code>git branch new-feature</code>.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-branch" target="_blank">Learn more about <code>git branch</code></a></p>
+                
+                <p><strong><code>git checkout &lt;branch&gt;</code></strong>: Switch to a different branch.</p>
+                <div class="usage">
+                    <p><code>git checkout develop</code></p>
+                    <p>This command switches your working directory to the branch named <code>develop</code>. If the branch does not exist, you will receive an error. To create and switch to a new branch, use <code>git checkout -b new-branch</code>.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-checkout" target="_blank">Learn more about <code>git checkout</code></a></p>
+                
+                <p><strong><code>git merge &lt;branch&gt;</code></strong>: Merge changes from another branch into the current branch.</p>
+                <div class="usage">
+                    <p><code>git merge feature-branch</code></p>
+                    <p>This command merges the changes from the branch named <code>feature-branch</code> into the current branch. It combines the commit histories of both branches. Resolve any conflicts that arise during the merge process.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-merge" target="_blank">Learn more about <code>git merge</code></a></p>
+            </div>
+        </section>
+        
+        <section id="remote">
+            <h2>Remote Repositories</h2>
+            <div class="content">
+                <p><strong><code>git remote add &lt;name&gt; &lt;url&gt;</code></strong>: Add a remote repository.</p>
+                <div class="usage">
+                    <p><code>git remote add origin https://github.com/user/repo.git</code></p>
+                    <p>This command adds a remote repository named <code>origin</code> with the specified URL. You use this remote name to interact with the remote repository for fetch, push, and pull operations.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-remote" target="_blank">Learn more about <code>git remote</code></a></p>
+                
+                <p><strong><code>git fetch</code></strong>: Download objects and refs from another repository.</p>
+                <div class="usage">
+                    <p><code>git fetch origin</code></p>
+                    <p>This command fetches updates from the remote repository named <code>origin</code> but does not automatically merge them into your local branches. It updates your local copies of the remote branches.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-fetch" target="_blank">Learn more about <code>git fetch</code></a></p>
+                
+                <p><strong><code>git pull</code></strong>: Fetch from a remote repository and merge.</p>
+                <div class="usage">
+                    <p><code>git pull origin main</code></p>
+                    <p>This command fetches updates from the remote branch <code>main</code> and automatically merges them into your current branch. It is a combination of <code>git fetch</code> and <code>git merge</code>.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-pull" target="_blank">Learn more about <code>git pull</code></a></p>
+                
+                <p><strong><code>git push</code></strong>: Update remote refs along with associated objects.</p>
+                <div class="usage">
+                    <p><code>git push origin main</code></p>
+                    <p>This command pushes your local commits to the remote repository named <code>origin</code> for the branch <code>main</code>. It updates the remote repository with your changes.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-push" target="_blank">Learn more about <code>git push</code></a></p>
+            </div>
+        </section>
+        
+        <section id="advanced">
+            <h2>Advanced Commands</h2>
+            <div class="content">
+                <p><strong><code>git rebase</code></strong>: Reapply commits on top of another base tip.</p>
+                <div class="usage">
+                    <p><code>git rebase main</code></p>
+                    <p>This command reapplies your local commits on top of the <code>main</code> branch. It is often used to incorporate upstream changes into your branch, resulting in a linear commit history.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-rebase" target="_blank">Learn more about <code>git rebase</code></a></p>
+                
+                <p><strong><code>git cherry-pick &lt;commit&gt;</code></strong>: Apply the changes introduced by some existing commits.</p>
+                <div class="usage">
+                    <p><code>git cherry-pick a1b2c3d4</code></p>
+                    <p>This command applies the changes from the commit with hash <code>a1b2c3d4</code> to your current branch. It is useful for picking specific commits from another branch.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-cherry-pick" target="_blank">Learn more about <code>git cherry-pick</code></a></p>
+                
+                <p><strong><code>git stash</code></strong>: Stash the changes in a dirty working directory.</p>
+                <div class="usage">
+                    <p><code>git stash</code></p>
+                    <p>This command temporarily saves your uncommitted changes and reverts your working directory to match the HEAD commit. To reapply the changes, use <code>git stash pop</code>.</p>
+                </div>
+                <p><a href="https://git-scm.com/docs/git-stash" target="_blank">Learn more about <code>git stash</code></a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="sfc-member">
+            Git is a member of <a href="https://git-scm.com/sfc">Software Freedom Conservancy</a>
+          </div>
+    </footer>
+</body>
+</html>
