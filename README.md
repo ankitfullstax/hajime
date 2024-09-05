@@ -1,2 +1,2 @@
 # Hajime  
-Description: Begining or First
+Description: Beginning or First
